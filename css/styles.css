@@ -1,0 +1,208 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: #b5945a;
+}
+
+.letra-nav{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-link{
+    color: white!important
+}
+
+
+.barrio-del-puerto{
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.san-telmo{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.img-principal {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 60vh; /* Ocupa el 60% de la altura del viewport */
+    object-fit: cover; /* Hace que la imagen se recorte si es necesario para ajustarse */
+    display: block; /* Elimina el espacio en línea que las imágenes pueden generar */
+}
+
+/*Circulos */
+/*Circulos */
+.circle-section {
+    background-color: #f8f9fa; /* Color de fondo opcional para la sección */
+}
+
+.circle {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centra el círculo dentro de su columna */
+    position: relative; /* Establece el contexto para el posicionamiento absoluto del texto */
+    transition: transform 0.5s ease, background-color 0.5s ease; /* Transiciones para rotación y color */
+    background-color: transparent; /* Color de fondo inicial */
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el círculo sin deformarse */
+    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+}
+
+.circle-text {
+    position: absolute; /* Posiciona el texto de manera absoluta */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Estilo de fuente en negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Agrega sombra para mejorar la legibilidad */
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+}
+
+.circle-description {
+    display: none; /* Oculta el párrafo por defecto */
+    position: absolute;
+    bottom: 10px; /* Posiciona el párrafo dentro del círculo */
+    left: 50%;
+    transform: translateX(-50%) rotateY(180deg); /* Revertir la rotación para mantener la orientación */
+    color: white; /* Color del texto */
+    text-align: center;
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+}
+
+.circle:hover {
+    background-color: #b5945a; /* Cambia el color de fondo al pasar el mouse */
+    transform: rotateY(180deg); /* Rota el círculo al pasar el mouse */
+}
+
+.circle:hover img {
+    opacity: 0; /* Oculta la imagen al pasar el mouse */
+}
+
+.circle:hover .circle-text {
+    display: none; /* Oculta el texto principal al pasar el mouse */
+}
+
+.circle:hover .circle-description {
+    display: block; /* Muestra el párrafo al pasar el mouse */
+    transform: translateX(-50%) rotateY(180deg); /* Mantiene la orientación correcta al mostrar */
+}
+
+
+
+
+/* Estilo para la sección del mapa */
+.map-section {
+    padding: 30px 0;
+}
+
+/* Ajustes del contenedor del mapa */
+.map-container {
+    width: 100%;
+    height: 300px; /* Puedes ajustar la altura según tus necesidades */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Caja de información a la derecha */
+.info-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para darle un efecto flotante */
+}
+
+/* Asegura que el mapa y la caja de info tengan buen espaciado en pantallas pequeñas */
+@media (max-width: 768px) {
+    .map-container {
+        height: 200px; /* Reduce la altura en pantallas más pequeñas */
+    }
+}
+
+
+
+/* Sección de cards */
+.cards-section {
+    background-color: #f8f9fa; /* Color de fondo opcional para la sección */
+}
+
+/* Estilo de las cards */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Estilo de las imágenes dentro de las cards */
+.card-img-top {
+    width: 50%;
+    height: 160px;
+    object-fit: cover; /* Ajusta la imagen sin deformarse */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Espaciado entre las filas */
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Efecto hover para las cards */
+.card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al hacer hover */
+}
+
+/* Justificación entre cards */
+.row.justify-content-between {
+    justify-content: space-between !important; /* Añade separación entre las cards */
+}
+
+
+
+/* Sección de texto y foto */
+
+/* Estilo de la imagen */
+.text-image-section img {
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para la imagen */
+}
+
+
+/* Estilo del footer */
+.footer {
+    background-color: #b5945a; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+.footer .left-footer {
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.footer .right-footer {
+    display: flex; /* Usamos flex para alinear los iconos */
+    gap: 15px; /* Espacio entre los iconos */
+    font-size: 24px; /* Tamaño de los íconos */
+}
+
+.social-icon:hover {
+    color: #fff; /* Mantiene el color blanco al hacer hover */
+    transform: scale(1.1); /* Aumentar el tamaño de los iconos al pasar el mouse */
+    transition: transform 0.3s; /* Efecto de hover suave */
+}
+
