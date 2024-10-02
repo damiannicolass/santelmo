@@ -27,7 +27,7 @@ body{
 }
 
 .san-telmo{
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
 }
 
@@ -39,23 +39,29 @@ body{
 }
 
 /*Circulos */
-/*Circulos */
 .circle-section {
-    background-color: #f8f9fa; /* Color de fondo opcional para la sección */
+    padding: 20px 0; /* Espaciado vertical */
+}
+
+.row {
+    display: flex; /* Usar flexbox para el contenedor de la fila */
+    justify-content: center; /* Centra los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente fila si no hay espacio */
 }
 
 .circle {
-    width: 210px;
-    height: 210px;
+    width: 100%; /* Hacemos que el círculo ocupe todo el ancho disponible */
+    max-width: 210px; /* Limita el ancho máximo */
+    aspect-ratio: 1; /* Mantiene la relación de aspecto 1:1 */
     border-radius: 50%; /* Hace que el div sea un círculo */
     overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Centra el círculo dentro de su columna */
     position: relative; /* Establece el contexto para el posicionamiento absoluto del texto */
     transition: transform 0.5s ease, background-color 0.5s ease; /* Transiciones para rotación y color */
     background-color: transparent; /* Color de fondo inicial */
+    margin: 2px;
 }
 
 .circle img {
@@ -101,6 +107,7 @@ body{
     display: block; /* Muestra el párrafo al pasar el mouse */
     transform: translateX(-50%) rotateY(180deg); /* Mantiene la orientación correcta al mostrar */
 }
+
 
 
 
