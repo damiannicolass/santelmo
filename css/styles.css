@@ -69,13 +69,14 @@ body{
     height: 100%;
     object-fit: cover; /* Ajusta la imagen para cubrir el círculo sin deformarse */
     transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+    filter: brightness(70%); /* Reduce el brillo al 50%, oscureciendo la imagen */
 }
 
 .circle-text {
     position: absolute; /* Posiciona el texto de manera absoluta */
     color: white; /* Color del texto */
     font-weight: bold; /* Estilo de fuente en negrita */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Agrega sombra para mejorar la legibilidad */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Agrega sombra para mejorar la legibilidad */
     z-index: 1; /* Asegura que el texto esté por encima de la imagen */
 }
 
