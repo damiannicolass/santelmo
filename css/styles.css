@@ -14,21 +14,30 @@ body {
 }
 
 .logo {
-    width: 80px;
+    width: 100px;
 }
 
-.titulo {
-    width: 100vw;
-    /* Ocupa todo el ancho del viewport */
-    height: 100vh;
-    /* Puedes ajustar este valor según lo que necesites */
-    object-fit: cover;
-    /* Ajusta la imagen para que siempre cubra el contenedor */
-    display: block;
-    /* Asegura que se trate como un bloque y no como un inline element */
-    margin: 0 auto;
-    /* Centra la imagen */
+.div-titulo-unique {
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    position: relative; /* Posicionamiento relativo para manejar mejor el contenido */
 }
+
+.titulo-unique {
+    width: 100%; /* Ocupa todo el ancho de su contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    max-height: 100vh; /* Limita la altura máxima al 100% del viewport */
+    object-fit: cover; /* Ajusta la imagen para que siempre cubra el contenedor */
+    display: block; /* Asegura que se trate como un bloque */
+    margin: 0 auto; /* Centra la imagen si es necesario */
+}
+
+/* Media query para pantallas menores a 550px */
+@media (max-width: 550px) {
+    .mi-imagen-unique {
+        margin-top: 70px; /* Ajusta este valor según lo que necesites */
+    }
+}
+
 
 
 
@@ -214,6 +223,14 @@ body {
     margin: 0 auto;
 }
 
+/* Media query para pantallas menores a 840px */
+@media (max-width: 840px) {
+    .historia-image-unique img {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        height: auto; /* Mantiene la relación de aspecto */
+    }
+}
+
 /* Contenedor para las cards, que controla el margen superior */
 .historia-cards-container-unique {
     position: relative;
@@ -236,17 +253,17 @@ body {
 }
 
 .card-unique {
-    background-color: #b5945a;
-    /* Color de fondo de la card */
+    background-color: #b5945a; /* Color de fondo de la card */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     z-index: 2;
 }
 
-.text-card-historia{
-    color: white;
+.text-card-historia {
+    color: white; 
 }
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
