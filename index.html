@@ -18,9 +18,9 @@
 
 <body>
     <!--NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar">
+    <nav class="navbar navbar-expand-lg navbar fixed-top">
         <div class="container-fluid">
-            <a class="letra-nav" href="#">Diseño Grafico</a>
+            <a href="#"><img src="/images/LOGO.png" alt="logo" class="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,19 +31,19 @@
                         <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Historia</a>
+                        <a class="nav-link" href="#historia">Historia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Atracciones</a>
+                        <a class="nav-link" href="#atracciones">Atracciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ubicacion</a>
+                        <a class="nav-link" href="#ubicacion">Ubicacion</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Imperdibles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">¡Jugá con nosotras!</a>
+                        <a class="nav-link" href="https://play.kahoot.it/v2/lobby?quizId=97b07076-52d2-4307-b1a0-55b9c852c947" target="_blank">¡Jugá con nosotras!</a>
                     </li>
                 </ul>
             </div>
@@ -51,51 +51,44 @@
     </nav>
 
     <!-- BANNER -->
-    <div>
-        <div class="mb-4">
+    <div class="div-titulo">
+        <img src="/images/TITULO.png" alt="" class="titulo">
+        <!-- <div class="mb-4">
             <p class="barrio-del-puerto">"BARRIO DEL PUERTO"</p>
             <p class="text-center san-telmo">San Telmo</p>
             <p class="text-center">Uno de los barrios más antiguos y tradicionales. Sede del casco histórico y de muchas
                 tanguerías.</p>
-        </div>
+        </div>-->
         <!-- <div class="container-fluid p-0"> 
             <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/feria-san-telmo-gente-dia-arte-1500x610.jpg"
                 alt="foto" class="img-principal">
         </div>-->
     </div>
 
-    <section class="circle-section text-center py-2">
+    <section class="circle-section text-center py-2" id="atracciones">
         <div class="container">
             <div class="row justify-content-center"> <!-- Justificamos el contenido al centro -->
                 <div class="col-6 col-sm-5 col-md-4 col-lg-3"> <!-- Ajustamos el tamaño de las columnas -->
                     <div class="circle">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/feria-san-telmo-gente-dia-arte-1500x610.jpg"
-                            alt="Imagen 1">
-                        <span class="circle-text">FERIA</span>
+                        <img src="images/CIRCULO1.png" alt="Imagen 1">
                         <p class="circle-description">Descripción de la Feria.</p>
                     </div>
                 </div>
                 <div class="col-6 col-sm-5 col-md-4 col-lg-3">
                     <div class="circle">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/casa_minima_1200_2.jpg"
-                            alt="Imagen 2">
-                        <span class="circle-text">CASA MINIMA</span>
+                        <img src="images/CIRCULO2.png" alt="Imagen 2">
                         <p class="circle-description">Descripción de la Casa Mínima.</p>
                     </div>
                 </div>
                 <div class="col-6 col-sm-5 col-md-4 col-lg-3">
                     <div class="circle">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/mercado_san_telmo1500x610_0.jpg"
-                            alt="Imagen 3">
-                        <span class="circle-text">MERCADO</span>
+                        <img src="images/CIRCULO3.png" alt="Imagen 3">
                         <p class="circle-description">Descripción del Mercado.</p>
                     </div>
                 </div>
                 <div class="col-6 col-sm-5 col-md-4 col-lg-3">
                     <div class="circle">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/galeria-solar-frecnh-1500x610.jpg"
-                            alt="Imagen 4">
-                        <span class="circle-text">SOLAR DE FRENCH</span>
+                        <img src="images/CIRCULO4.png" alt="Imagen 4">
                         <p class="circle-description">Descripción del Solar de French.</p>
                     </div>
                 </div>
@@ -107,7 +100,7 @@
 
 
     <!-- MAPA INTERACTIVO Y SECCIÓN DE INFORMACIÓN -->
-    <section class="map-section py-5">
+    <section class="map-section py-5" id="ubicacion">
         <div class="container">
             <div class="row">
                 <!-- Contenedor del mapa a la izquierda -->
@@ -127,6 +120,33 @@
             </div>
         </div>
     </section>
+
+
+    <!--HISTORIA-->
+    <section class="historia-section-unique" id="historia">
+        <div class="historia-image-unique">
+            <img src="https://holasantelmo.ar/wp-content/uploads/2021/05/Hola-San-Telmo-A-cada-paso-una-historia-Viejo-Almacen-F1-660x330.jpg" alt="Imagen de Historia">
+        </div>
+        <div class="container historia-cards-container-unique">
+            <div class="row justify-content-center historia-cards-unique">
+                <div class="col-md-5 col-sm-12 card-unique">
+                    <h2 class="text-card-historia">Historia</h2>
+                    <p class="text-card-historia" >San Telmo fue habitado por las familias más ricas de la ciudad hasta que, en 1871, la epidemia de
+                        la fiebre amarilla asoló la zona y los sobrevivientes se desplazaron hacia el norte de la
+                        ciudad.</p>
+                    <p class="text-card-historia">Tras la huida de las familias acomodadas, los inmigrantes europeos aprovecharon las edificaciones coloniales agolpandose en los llamados "conventillos", en los que las familias malvivían hacinadas en pequeños cuartos</p>
+                </div>
+                <div class="col-md-5 col-sm-12 card-unique ">
+                    <p class="text-card-historia text-p-card">Estos inmigrantes, en su mayoría dedicados a la artesanía y al comercio, le fueron imprimiendo
+                        sus costumbres al lugar. Desde entonces se caracterizó por sus ferias callejeras.</p>
+                    <p class="text-card-historia">En 1970 se creo la feria de antigüedades de la Plaza Dorrego y se tomo la  determinacion de conservar el importante patrimonio arquitectónico de la zona. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
 
 
     <!-- SECCIÓN DE CARDS -->

@@ -1,112 +1,161 @@
-body{
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.navbar{
+.navbar {
     background-color: #b5945a;
 }
 
-.letra-nav{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+
+.nav-link {
+    color: white !important
 }
 
-.nav-link{
-    color: white!important
+.logo {
+    width: 80px;
+}
+
+.titulo {
+    width: 100vw;
+    /* Ocupa todo el ancho del viewport */
+    height: 100vh;
+    /* Puedes ajustar este valor según lo que necesites */
+    object-fit: cover;
+    /* Ajusta la imagen para que siempre cubra el contenedor */
+    display: block;
+    /* Asegura que se trate como un bloque y no como un inline element */
+    margin: 0 auto;
+    /* Centra la imagen */
 }
 
 
-.barrio-del-puerto{
+
+
+.barrio-del-puerto {
     text-align: center;
     font-size: 11px;
     margin-bottom: 0;
     margin-top: 20px;
 }
 
-.san-telmo{
+.san-telmo {
     font-size: 60px;
     font-weight: bold;
 }
 
 .img-principal {
-    width: 100%; /* Ocupa el 100% del ancho del contenedor */
-    height: 60vh; /* Ocupa el 60% de la altura del viewport */
-    object-fit: cover; /* Hace que la imagen se recorte si es necesario para ajustarse */
-    display: block; /* Elimina el espacio en línea que las imágenes pueden generar */
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor */
+    height: 60vh;
+    /* Ocupa el 60% de la altura del viewport */
+    object-fit: cover;
+    /* Hace que la imagen se recorte si es necesario para ajustarse */
+    display: block;
+    /* Elimina el espacio en línea que las imágenes pueden generar */
+}
+
+.div-titulo {
+    overflow: hidden;
+    /* Evita mostrar la parte recortada de la imagen */
 }
 
 /*Circulos */
 .circle-section {
-    padding: 20px 0; /* Espaciado vertical */
+    padding: 20px 0;
+    /* Espaciado vertical */
 }
 
 .row {
-    display: flex; /* Usar flexbox para el contenedor de la fila */
-    justify-content: center; /* Centra los elementos */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente fila si no hay espacio */
+    display: flex;
+    /* Usar flexbox para el contenedor de la fila */
+    justify-content: center;
+    /* Centra los elementos */
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan a la siguiente fila si no hay espacio */
 }
 
 .circle {
-    width: 100%; /* Hacemos que el círculo ocupe todo el ancho disponible */
-    max-width: 210px; /* Limita el ancho máximo */
-    aspect-ratio: 1; /* Mantiene la relación de aspecto 1:1 */
-    border-radius: 50%; /* Hace que el div sea un círculo */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    width: 100%;
+    /* Hacemos que el círculo ocupe todo el ancho disponible */
+    aspect-ratio: 1;
+    /* Mantiene la relación de aspecto 1:1 */
+    border-radius: 50%;
+    /* Hace que el div sea un círculo */
+    overflow: hidden;
+    /* Oculta cualquier parte de la imagen que sobresalga */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Establece el contexto para el posicionamiento absoluto del texto */
-    transition: transform 0.5s ease, background-color 0.5s ease; /* Transiciones para rotación y color */
-    background-color: transparent; /* Color de fondo inicial */
+    position: relative;
+    /* Establece el contexto para el posicionamiento absoluto del texto */
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    /* Transiciones para rotación y color */
+    background-color: transparent;
+    /* Color de fondo inicial */
     margin: 2px;
 }
 
 .circle img {
-    width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen para cubrir el círculo sin deformarse */
-    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
-    filter: brightness(70%); /* Reduce el brillo al 50%, oscureciendo la imagen */
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir el círculo sin deformarse */
+    transition: opacity 0.5s ease;
+    /* Transición suave para la opacidad */
 }
 
 .circle-text {
-    position: absolute; /* Posiciona el texto de manera absoluta */
-    color: white; /* Color del texto */
-    font-weight: bold; /* Estilo de fuente en negrita */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Agrega sombra para mejorar la legibilidad */
-    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    position: absolute;
+    /* Posiciona el texto de manera absoluta */
+    color: white;
+    /* Color del texto */
+    font-weight: bold;
+    /* Estilo de fuente en negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    /* Agrega sombra para mejorar la legibilidad */
+    z-index: 1;
+    /* Asegura que el texto esté por encima de la imagen */
 }
 
 .circle-description {
-    display: none; /* Oculta el párrafo por defecto */
+    display: none;
+    /* Oculta el párrafo por defecto */
     position: absolute;
-    bottom: 10px; /* Posiciona el párrafo dentro del círculo */
+    bottom: 10px;
+    /* Posiciona el párrafo dentro del círculo */
     left: 50%;
-    transform: translateX(-50%) rotateY(180deg); /* Revertir la rotación para mantener la orientación */
-    color: white; /* Color del texto */
+    transform: translateX(-50%) rotateY(180deg);
+    /* Revertir la rotación para mantener la orientación */
+    color: white;
+    /* Color del texto */
     text-align: center;
-    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    z-index: 1;
+    /* Asegura que el texto esté por encima de la imagen */
 }
 
 .circle:hover {
-    background-color: #b5945a; /* Cambia el color de fondo al pasar el mouse */
-    transform: rotateY(180deg); /* Rota el círculo al pasar el mouse */
+    background-color: #b5945a;
+    /* Cambia el color de fondo al pasar el mouse */
+    transform: rotateY(180deg);
+    /* Rota el círculo al pasar el mouse */
 }
 
 .circle:hover img {
-    opacity: 0; /* Oculta la imagen al pasar el mouse */
+    opacity: 0;
+    /* Oculta la imagen al pasar el mouse */
 }
 
 .circle:hover .circle-text {
-    display: none; /* Oculta el texto principal al pasar el mouse */
+    display: none;
+    /* Oculta el texto principal al pasar el mouse */
 }
 
 .circle:hover .circle-description {
-    display: block; /* Muestra el párrafo al pasar el mouse */
-    transform: translateX(-50%) rotateY(180deg); /* Mantiene la orientación correcta al mostrar */
+    display: block;
+    /* Muestra el párrafo al pasar el mouse */
+    transform: translateX(-50%) rotateY(180deg);
+    /* Mantiene la orientación correcta al mostrar */
 }
 
 
@@ -116,12 +165,14 @@ body{
 /* Estilo para la sección del mapa */
 .map-section {
     padding: 30px 0;
+    background-color: #f8f9fa;
 }
 
 /* Ajustes del contenedor del mapa */
 .map-container {
     width: 100%;
-    height: 300px; /* Puedes ajustar la altura según tus necesidades */
+    height: 300px;
+    /* Puedes ajustar la altura según tus necesidades */
     border: 2px solid #ccc;
     border-radius: 10px;
 }
@@ -132,21 +183,99 @@ body{
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para darle un efecto flotante */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Sombra para darle un efecto flotante */
 }
 
 /* Asegura que el mapa y la caja de info tengan buen espaciado en pantallas pequeñas */
 @media (max-width: 768px) {
     .map-container {
-        height: 200px; /* Reduce la altura en pantallas más pequeñas */
+        height: 200px;
+        /* Reduce la altura en pantallas más pequeñas */
     }
 }
 
 
 
+/*historia*/
+.historia-section-unique {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    /* Color de fondo para la sección */
+}
+
+.historia-image-unique img {
+    width: 80%;
+    height: 70vh;
+    /* Ajusta según el tamaño que necesites */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Contenedor para las cards, que controla el margen superior */
+.historia-cards-container-unique {
+    position: relative;
+    top: -50px;
+    /* Ajusta la superposición de las cards sobre la imagen */
+    z-index: 2;
+    /* Hace que las cards estén encima de la imagen */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente las cards */
+    align-items: center; /* Centra verticalmente las cards dentro de su contenedor */
+}
+
+/* Estilos de las cards */
+.historia-cards-unique {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-unique {
+    background-color: #b5945a;
+    /* Color de fondo de la card */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.text-card-historia{
+    color: white;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .historia-cards-unique {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .card-unique {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .text-p-card {
+        margin-top: 43px; /* Ajusta este valor según lo que necesites */
+        /* O puedes usar padding en lugar de margin, dependiendo de tu diseño */
+        /* padding-top: 20px; */
+    }
+}
+
+
+
+
 /* Sección de cards */
 .cards-section {
-    background-color: #f8f9fa; /* Color de fondo opcional para la sección */
+    background-color: #f8f9fa;
+    /* Color de fondo opcional para la sección */
 }
 
 /* Estilo de las cards */
@@ -161,7 +290,8 @@ body{
 .card-img-top {
     width: 50%;
     height: 160px;
-    object-fit: cover; /* Ajusta la imagen sin deformarse */
+    object-fit: cover;
+    /* Ajusta la imagen sin deformarse */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -173,12 +303,14 @@ body{
 
 /* Efecto hover para las cards */
 .card:hover {
-    transform: translateY(-5px); /* Eleva la tarjeta al hacer hover */
+    transform: translateY(-5px);
+    /* Eleva la tarjeta al hacer hover */
 }
 
 /* Justificación entre cards */
 .row.justify-content-between {
-    justify-content: space-between !important; /* Añade separación entre las cards */
+    justify-content: space-between !important;
+    /* Añade separación entre las cards */
 }
 
 
@@ -187,30 +319,40 @@ body{
 
 /* Estilo de la imagen */
 .text-image-section img {
-    border-radius: 10px; /* Bordes redondeados para la imagen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para la imagen */
+    border-radius: 10px;
+    /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra opcional para la imagen */
 }
 
 
 /* Estilo del footer */
 .footer {
-    background-color: #b5945a; /* Color de fondo */
-    color: white; /* Color del texto */
+    background-color: #b5945a;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
 }
 
 .footer .left-footer {
-    text-align: left; /* Alineación del texto a la izquierda */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
 }
 
 .footer .right-footer {
-    display: flex; /* Usamos flex para alinear los iconos */
-    gap: 15px; /* Espacio entre los iconos */
-    font-size: 24px; /* Tamaño de los íconos */
+    display: flex;
+    /* Usamos flex para alinear los iconos */
+    gap: 15px;
+    /* Espacio entre los iconos */
+    font-size: 24px;
+    /* Tamaño de los íconos */
 }
 
 .social-icon:hover {
-    color: #fff; /* Mantiene el color blanco al hacer hover */
-    transform: scale(1.1); /* Aumentar el tamaño de los iconos al pasar el mouse */
-    transition: transform 0.3s; /* Efecto de hover suave */
+    color: #fff;
+    /* Mantiene el color blanco al hacer hover */
+    transform: scale(1.1);
+    /* Aumentar el tamaño de los iconos al pasar el mouse */
+    transition: transform 0.3s;
+    /* Efecto de hover suave */
 }
-
