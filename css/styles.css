@@ -1,11 +1,22 @@
+@font-face {
+    font-family: 'Auromiya';
+    src: url('../fonts/auromiya.ttf') format('opentype');
+    /* Cambia a format('opentype') */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
 .navbar {
-    background-color: #b5945a;
+    background-color: #a51916;
+    ;
 }
 
 
@@ -14,27 +25,68 @@ body {
 }
 
 .logo {
-    width: 100px;
+    width: 140px;
+    margin-left: 100px;
 }
 
+
+
+
+
+
+
+
+/*TITULO*/
 .div-titulo-unique {
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
-    position: relative; /* Posicionamiento relativo para manejar mejor el contenido */
+    position: relative;
+    /* Necesario para que los párrafos se posicionen sobre la imagen */
+    width: 100%;
+    height: 100vh;
+    /* Hace que el contenedor ocupe toda la altura de la ventana */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente el contenido dentro del contenedor */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
 }
 
 .titulo-unique {
-    width: 100%; /* Ocupa todo el ancho de su contenedor */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-    max-height: 100vh; /* Limita la altura máxima al 100% del viewport */
-    object-fit: cover; /* Ajusta la imagen para que siempre cubra el contenedor */
-    display: block; /* Asegura que se trate como un bloque */
-    margin: 0 auto; /* Centra la imagen si es necesario */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* La imagen cubre el contenedor */
+    position: absolute;
+    /* La imagen se coloca detrás del contenido */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* La imagen queda por detrás de los textos */
 }
 
-/* Media query para pantallas menores a 550px */
-@media (max-width: 550px) {
-    .mi-imagen-unique {
-        margin-top: 70px; /* Ajusta este valor según lo que necesites */
+.content-overlay {
+    color: white;
+    /* Color del texto para que contraste con la imagen */
+    z-index: 1;
+    /* Asegura que los párrafos estén sobre la imagen */
+    padding: 20px;
+    /* Espaciado interno para los párrafos */
+    max-width: 1100px;
+    /* Controla el ancho máximo del bloque de texto */
+    margin-top: 300px;
+}
+
+.p-subtitulo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media (max-width: 850px) {
+    .content-overlay {
+        font-size: 0.9em;
+        /* Ajusta el tamaño de texto en pantallas pequeñas */
+        padding: 15px;
+        /* Ajusta el padding en pantallas más pequeñas */
     }
 }
 
@@ -42,38 +94,58 @@ body {
 
 
 
-.barrio-del-puerto {
-    text-align: center;
-    font-size: 11px;
-    margin-bottom: 0;
-    margin-top: 20px;
-}
 
-.san-telmo {
-    font-size: 60px;
-    font-weight: bold;
-}
 
-.img-principal {
-    width: 100%;
-    /* Ocupa el 100% del ancho del contenedor */
-    height: 60vh;
-    /* Ocupa el 60% de la altura del viewport */
-    object-fit: cover;
-    /* Hace que la imagen se recorte si es necesario para ajustarse */
-    display: block;
-    /* Elimina el espacio en línea que las imágenes pueden generar */
-}
-
-.div-titulo {
-    overflow: hidden;
-    /* Evita mostrar la parte recortada de la imagen */
-}
 
 /*Circulos */
 .circle-section {
-    padding: 20px 0;
-    /* Espaciado vertical */
+    background-image: url(../images/fondo-circulos.png);
+    height: 110vh;
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-color: #ac9664;
+
+    position: relative;
+    z-index: 1;
+}
+
+.contenido-circulos {
+    margin-top: 6rem;
+}
+
+.p-circulos {
+    color: white;
+    /* Color del texto */
+    font-size: 1rem;
+    /* Tamaño de fuente ajustado */
+    width: 800px;
+    /* Ancho específico */
+    text-align: center;
+    /* Centra el texto dentro de los párrafos */
+    margin: 0;
+    /* Elimina márgenes para una mejor alineación */
+}
+
+/* Asegúrate de que el contenedor tenga un tamaño adecuado */
+.d-flex {
+    width: 100%;
+    /* Para que ocupe todo el ancho disponible */
+}
+
+/* Opcional: Agregar algo de espacio entre los párrafos */
+.p-circulos+.p-circulos {
+    margin-top: 10px;
+    /* Espacio entre los párrafos */
+}
+
+.titulo-imperdibles {
+    font-family: 'Auromiya', sans-serif !important;
+    /* Asegúrate de escribirlo igual */
+    color: white;
 }
 
 .row {
@@ -86,7 +158,7 @@ body {
 }
 
 .circle {
-    width: 100%;
+    width: 80%;
     /* Hacemos que el círculo ocupe todo el ancho disponible */
     aspect-ratio: 1;
     /* Mantiene la relación de aspecto 1:1 */
@@ -114,25 +186,13 @@ body {
     /* Transición suave para la opacidad */
 }
 
-.circle-text {
-    position: absolute;
-    /* Posiciona el texto de manera absoluta */
-    color: white;
-    /* Color del texto */
-    font-weight: bold;
-    /* Estilo de fuente en negrita */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-    /* Agrega sombra para mejorar la legibilidad */
-    z-index: 1;
-    /* Asegura que el texto esté por encima de la imagen */
-}
 
 .circle-description {
     display: none;
     /* Oculta el párrafo por defecto */
     position: absolute;
-    bottom: 10px;
-    /* Posiciona el párrafo dentro del círculo */
+    width: 55%;
+    /* Aumenta el ancho del texto para que ocupe más espacio horizontalmente */
     left: 50%;
     transform: translateX(-50%) rotateY(180deg);
     /* Revertir la rotación para mantener la orientación */
@@ -141,6 +201,10 @@ body {
     text-align: center;
     z-index: 1;
     /* Asegura que el texto esté por encima de la imagen */
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+    /* Ajusta la separación entre líneas */
 }
 
 .circle:hover {
@@ -172,9 +236,18 @@ body {
 
 
 /* Estilo para la sección del mapa */
+
 .map-section {
     padding: 30px 0;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
+    height: 100vh;
+    /* Hace que el contenedor ocupe toda la altura de la ventana */
+    display: flex;
+    /* Activamos Flexbox */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
 }
 
 /* Ajustes del contenedor del mapa */
@@ -188,12 +261,13 @@ body {
 
 /* Caja de información a la derecha */
 .info-box {
-    background-color: #fff;
     padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    /* Sombra para darle un efecto flotante */
+}
+
+.p-mapa {
+    font-size: 18px;
+    color: #a51916;
+
 }
 
 /* Asegura que el mapa y la caja de info tengan buen espaciado en pantallas pequeñas */
@@ -203,6 +277,10 @@ body {
         /* Reduce la altura en pantallas más pequeñas */
     }
 }
+
+
+
+
 
 
 
@@ -227,34 +305,42 @@ body {
 /* Contenedor para las cards, que controla el margen superior */
 .historia-cards-container-unique {
     position: relative;
-    top: -50px;
+    top: -150px;
     /* Ajusta la superposición de las cards sobre la imagen */
     z-index: 2;
     /* Hace que las cards estén encima de la imagen */
     display: flex;
-    justify-content: center; /* Centra horizontalmente las cards */
-    align-items: center; /* Centra verticalmente las cards dentro de su contenedor */
+    justify-content: center;
+    /* Centra horizontalmente las cards */
+    align-items: center;
+    /* Centra verticalmente las cards dentro de su contenedor */
 }
 
 /* Estilos de las cards */
 .historia-cards-unique {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
-    margin: 0 auto;
+    gap: 160px;
+
 }
 
 .card-unique {
-    background-color: #b5945a; /* Color de fondo de la card */
+    background-color: #b5945a;
+    /* Color de fondo de la card */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
     z-index: 2;
 }
 
+.historia-titulo {
+    font-family: 'Auromiya', sans-serif !important;
+    /* Asegúrate de escribirlo igual */
+    color: white;
+}
+
 .text-card-historia {
-    color: white; 
+    color: white;
+    font-size: 16px;
 }
 
 
@@ -273,7 +359,8 @@ body {
 
 @media (min-width: 769px) {
     .text-p-card {
-        margin-top: 43px; /* Ajusta este valor según lo que necesites */
+        margin-top: 43px;
+        /* Ajusta este valor según lo que necesites */
         /* O puedes usar padding en lugar de margin, dependiendo de tu diseño */
         /* padding-top: 20px; */
     }
@@ -281,64 +368,197 @@ body {
 
 
 
-
-/* Sección de cards */
-.cards-section {
-    background-color: #f8f9fa;
-    /* Color de fondo opcional para la sección */
+/* CARDS */
+.seccion-card {
+    padding-top: 3rem;
+    /* Espaciado superior */
+    padding-bottom: 3rem;
+    /* Espaciado inferior */
 }
 
-/* Estilo de las cards */
-.card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-/* Estilo de las imágenes dentro de las cards */
-.card-img-top {
-    width: 50%;
-    height: 160px;
+/* Imagen del Santo */
+.img-santo {
+    height: 600px;
+    /* Altura fija para la imagen del santo */
     object-fit: cover;
-    /* Ajusta la imagen sin deformarse */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* Mantiene la relación de aspecto */
 }
 
-/* Espaciado entre las filas */
-.mb-4 {
-    margin-bottom: 1.5rem !important;
+/* Imágenes de la segunda fila (Mercado de San Telmo y Escudo San Telmo) */
+.img-doble {
+    width: 100%;
+    /* Asegura que ambas imágenes ocupen el ancho completo de su columna */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
 }
 
-/* Efecto hover para las cards */
-.card:hover {
-    transform: translateY(-5px);
-    /* Eleva la tarjeta al hacer hover */
+/* Imagen de la cuarta fila (Equipo San Telmo) */
+.img-abajo {
+    width: 100%;
+    /* Asegura que ocupe el ancho completo de su columna */
+    height: auto;
+    /* Mantiene la relación de aspecto */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
 }
 
-/* Justificación entre cards */
-.row.justify-content-between {
-    justify-content: space-between !important;
-    /* Añade separación entre las cards */
+/* Espaciado entre las imágenes */
+.row>div {
+    padding: 0.5rem;
+    /* Espaciado entre imágenes */
 }
 
+/* Alineación y flexbox para la cuarta imagen */
+.col-md-8 {
+    display: flex;
+    justify-content: center;
+    /* Centra la cuarta imagen horizontalmente */
+}
 
 
 /* Sección de texto y foto */
 
-/* Estilo de la imagen */
-.text-image-section img {
-    border-radius: 10px;
-    /* Bordes redondeados para la imagen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra opcional para la imagen */
+.text-image-section {
+    background-color: #a51916;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
 }
+
+.arquitectura-titulo {
+    font-family: 'Auromiya', sans-serif !important;
+    /* Asegúrate de escribirlo igual */
+    color: white;
+}
+
+.p-arquitectura {
+    color: white;
+}
+
+
+
+/*SECCION ARTE*/
+.arte {
+    background-image: url(../images/CECI.png);
+    height: 290vh;
+    background-size: contain;
+    /* Ajusta la imagen para que se contenga dentro del área */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    position: relative;
+    top: -125px;
+    z-index: 2;
+}
+
+.card-arte {
+    padding-top: 7rem;
+}
+
+.arte-contenido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    /* Asegura que todos los elementos hijos tengan la misma altura */
+}
+
+.contenido-imagen img {
+    width: 100%;
+    /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 20px;
+    /* Opcional: añade bordes redondeados a las imágenes */
+}
+
+.texto-card {
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.p-card-arte {
+    font-size: 10px;
+}
+
+
+
+/* Carrousel */
+.carrousel {
+    padding-top: 25rem;
+    /* Espacio superior */
+}
+
+.carousel-item {
+    display: flex;
+    /* Alinea las imágenes en una sola fila */
+    justify-content: center;
+    /* Centra las imágenes dentro del carrusel */
+}
+
+.carousel-item img {
+    width: 250px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    /* Organiza las imágenes y el texto en columnas */
+    align-items: center;
+    /* Centra horizontalmente la imagen y los textos */
+    text-align: center;
+    /* Centra el texto debajo de la imagen */
+    padding: 0 4px 0 4px;
+}
+
+.texto-carrousel{
+    background-color: white;
+    width: 100%;
+}
+.title,
+.subtitle {
+    margin: 5px 0;
+    /* Añade un margen vertical entre el título y el subtítulo */
+}
+
+.title {
+    font-size: 1rem;
+    /* Tamaño de fuente ajustado para el título */
+    font-weight: bold;
+    /* Hace que el título sea negrita */
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    /* Tamaño de fuente más pequeño para el subtítulo */
+    color: #666;
+    /* Cambia el color del subtítulo para diferenciarlo del título */
+}
+
+
+
+
+
+
+
+
+
 
 
 /* Estilo del footer */
 .footer {
-    background-color: #b5945a;
+    background-color: #a51916;
+    ;
     /* Color de fondo */
     color: white;
     /* Color del texto */

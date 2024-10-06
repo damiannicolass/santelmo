@@ -52,48 +52,25 @@
         </div>
     </nav>
 
+
+
+
     <!-- BANNER -->
-    <div class="div-titulo-unique">
-        <img src="images/TITULO3.png" alt="Banner" class="titulo-unique mi-imagen-unique">
+    <div class="container-fluid div-titulo-unique d-flex align-items-center justify-content-center">
+        <img src="images/TITULO.png" alt="Banner" class="titulo-unique mi-imagen-unique">
+        <div class="content-overlay text-center">
+            <p class="m-0 p-subtitulo">San Telmo es uno de los barrios más antiguos y tradicionales de Buenos Aires.</p>
+            <p class="p-subtitulo">Famoso por su ambiente bohemio y su historia rica, San Telmo alberga tanguerías,
+                mercados de antigüedades
+                y numerosas atracciones turísticas.</p>
+            <p class="p-subtitulo">En los 90, el barrio de San Telmo es al mismo tiempo moderno y antiguo, tranquilo y
+                agitado.</p>
+        </div>
     </div>
 
 
-    <section class="circle-section text-center py-2" id="atracciones">
-        <div class="container">
-            <div class="row justify-content-center"> <!-- Justificamos el contenido al centro -->
-                <div class="col-6 col-sm-5 col-md-4 col-lg-3"> <!-- Ajustamos el tamaño de las columnas -->
-                    <div class="circle">
-                        <img src="images/CIRCULO1.png" alt="Imagen 1">
-                        <p class="circle-description">Descripción de la Feria.</p>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
-                    <div class="circle">
-                        <img src="images/CIRCULO2.png" alt="Imagen 2">
-                        <p class="circle-description">Descripción de la Casa Mínima.</p>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
-                    <div class="circle">
-                        <img src="images/CIRCULO3.png" alt="Imagen 3">
-                        <p class="circle-description">Descripción del Mercado.</p>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
-                    <div class="circle">
-                        <img src="images/CIRCULO4.png" alt="Imagen 4">
-                        <p class="circle-description">Descripción del Solar de French.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
     <!-- MAPA INTERACTIVO Y SECCIÓN DE INFORMACIÓN -->
-    <section class="map-section py-5" id="ubicacion">
+    <section class="map-section py-5 seccion-mapa" id="ubicacion">
         <div class="container">
             <div class="row">
                 <!-- Contenedor del mapa a la izquierda -->
@@ -104,10 +81,11 @@
                 <!-- Contenedor de la información a la derecha -->
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
                     <div class="info-box">
-                        <h2>San Telmo</h2>
-                        <p>San Telmo es uno de los barrios más antiguos y tradicionales de Buenos Aires. Famoso por su
-                            ambiente bohemio y su historia rica, San Telmo alberga tanguerías, mercados de antigüedades
-                            y numerosas atracciones turísticas.</p>
+                        <p class="p-mapa">Sede del Casco Historico de la ciudad.
+                            Este barrio es unos de los epicentros del turismo en Buenos Aires, no solo por sus cafecitos
+                            trendy y su activa vida nocturna que se concentra alrededor del mercado, sino porque pasear
+                            por sus calles es como explorar un museo al aire libre. Cada Rincon cuenta una historia.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -118,13 +96,12 @@
     <!--HISTORIA-->
     <section class="historia-section-unique" id="historia">
         <div class="historia-image-unique">
-            <img  src="https://holasantelmo.ar/wp-content/uploads/2021/05/Hola-San-Telmo-A-cada-paso-una-historia-Viejo-Almacen-F1-660x330.jpg"
-                alt="Imagen de Historia" class="historia-image-unique-img">
+            <img src="images/HISTORIA.png" alt="Imagen de Historia" class="historia-image-unique-img">
         </div>
         <div class="container historia-cards-container-unique">
             <div class="row justify-content-center historia-cards-unique">
                 <div class="col-md-5 col-sm-12 card-unique">
-                    <h2 class="text-card-historia">Historia</h2>
+                    <h2 class="historia-titulo">Historia</h2>
                     <p class="text-card-historia">San Telmo fue habitado por las familias más ricas de la ciudad hasta
                         que, en 1871, la epidemia de
                         la fiebre amarilla asoló la zona y los sobrevivientes se desplazaron hacia el norte de la
@@ -145,105 +122,291 @@
     </section>
 
 
-
-
-
-    <!-- SECCIÓN DE CARDS -->
-    <section class="cards-section py-5">
-        <div class="container">
-            <div class="row justify-content-around">
-                <!-- Primera fila de cards -->
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/iglesia-san-pedro-telmo-frente-alto.jpg"
-                            class="card-img-top" alt="Card 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 1</h5>
-                            <p class="card-text">Descripción breve de la tarjeta 1.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/galeria-solar-frecnh-1500x610.jpg"
-                            class="card-img-top" alt="Card 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 2</h5>
-                            <p class="card-text">Descripción breve de la tarjeta 2.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/mercado_san_telmo1500x610_0.jpg"
-                            class="card-img-top" alt="Card 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 3</h5>
-                            <p class="card-text">Descripción breve de la tarjeta 3.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- CARDS -->
+    <div class="container d-flex seccion-card">
+        <div class="row col-4">
+            <!-- Primera imagen (4 columnas, 2 filas) -->
+            <div class="container d-flex justify-content-center">
+                <img src="images/3.png" class="rounded-3 img-santo" alt="Santo Imagen">
             </div>
 
-            <div class="row justify-content-around">
-                <!-- Segunda fila de cards -->
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/fachada-mumoderno-1500x610.jpg"
-                            class="card-img-top" alt="Card 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 4</h5>
-                            <p class="card-text">Descripción breve de la tarjeta 4.</p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="row">
+            <!-- Segunda imagen (4 columnas, 1 fila) -->
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="images/5.png" class="img-doble" alt="Mercado de San Telmo">
+            </div>
 
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/mercado-satelmo-fachada-1500x610.jpg"
-                            class="card-img-top" alt="Card 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 5</h5>
-                            <p class="card-text">Descripción breve de la tarjeta 5.</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Tercera imagen (4 columnas, 1 fila) -->
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="images/6.png" class="img-doble" alt="Escudo San Telmo">
+            </div>
 
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/mercado_san_telmo1500x610_fachada.jpg"
-                            class="card-img-top" alt="Card 6">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 6</h5>
-                            <p class="card-text">Descripción breve de la tarjeta 6.</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Cuarta imagen (4 columnas, 1 fila) -->
+            <div class="col-md-8 ">
+                <img src="images/4.png" class="img-abajo" alt="Equipo San Telmo">
             </div>
         </div>
-    </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- SECCIÓN DE TEXTO Y FOTO -->
     <section class="text-image-section py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Título de la Sección</h2>
-                    <p>
-                        Aquí puedes incluir un texto descriptivo sobre el barrio de San Telmo, sus atractivos, cultura y
-                        lo que lo hace especial.
-                        Aprovecha para incluir información interesante que capte la atención de los visitantes.
+                <div class="col-md-5">
+                    <h2 class="arquitectura-titulo px-4">Arquitectura imponente</h2>
+                    <p class="p-arquitectura px-4">
+                        San Telmo es icono de la arquitectura colonial y del encanto Bohemio, Sus calles empedradas, las
+                        casas bajas al estilo Europeo y los patios con aljubes sugieren una estampa detenida en el
+                        tiempo y crean una atmosfera nostalgica que te transporta a otra epoca.
                     </p>
                 </div>
-                <div class="col-md-6">
-                    <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/mercado_san_telmo1500x610_fachada.jpg"
-                        alt="Imagen de San Telmo" class="img-fluid">
+                <div class="col-md-7">
+                    <img src="images/arquitectura.png" alt="Imagen de San Telmo" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <!--CIRCULOS-->
+    <section class="circle-section text-center py-2" id="atracciones">
+        <div class="d-flex flex-column justify-content-center align-items-center contenido-circulos">
+            <p class="p-circulos">Porque San Telmo es sus estrechas calles y amplios zaguanes, sus gastados adoquines y
+                lustrosas rejas, su pequeñez geográfica y grandeza histórica, pero también es su gente.
+            </p>
+            <p class="p-circulos">Más que nada, su gente.-</p>
+        </div>
+
+        <h2 class="titulo-imperdibles my-5">Conoce alguno de sus imperdibles</h2>
+
+        <div class="container">
+            <div class="row justify-content-center"> <!-- Justificamos el contenido al centro -->
+                <div class="col-6 col-sm-5 col-md-4 col-lg-3"> <!-- Ajustamos el tamaño de las columnas -->
+                    <div class="circle">
+                        <img src="images/CIRCULO1.png" alt="Imagen 1">
+                        <p class="circle-description">Fue declarada Monumento Histórico Nacional y es una de las más
+                            antiguas de la ciudad. En la actualidad funciona aquí un museo que atesora piezas de más
+                            de
+                            200 años de antigüedad.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                    <div class="circle">
+                        <img src="images/CIRCULO2.png" alt="Imagen 2">
+                        <p class="circle-description">Se realiza todos los domingos sobre la Plaza Dorrego. Sus
+                            puestos
+                            son mayoritariamente de anticuarios, aunque tambien se venden artesanias y distintos
+                            objetos.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                    <div class="circle">
+                        <img src="images/CIRCULO3.png" alt="Imagen 3">
+                        <p class="circle-description">Vivienda de la segunda década del siglo XIX. Se la conoce como
+                            la
+                            más angosta de la Ciudad. Estas casas eran para los esclavos libertos, a quienes sus
+                            amos
+                            les asignaban un pequeño espacio para levantar sus viviendas.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                    <div class="circle">
+                        <img src="images/CIRCULO4.png" alt="Imagen 4">
+                        <p class="circle-description">Nació con el objetivo de abastecer a la nueva ola de
+                            inmigrantes
+                            europeos que llegaba a la Ciudad. Cuando lo visites, prestá atención a su estructura
+                            interna
+                            original formada por vigas, arcos y columnas de metal con techos de chapa y vidrio, y a
+                            la
+                            cúpula que lo engalana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ARTE -->
+    <div class="arte">
+        <!--CARD-->
+        <div class="container">
+            <div class="card-arte">
+                <div class="row arte-contenido">
+                    <!-- Card Superior Izquierda (solo imagen) -->
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <div class="contenido-imagen">
+                            <img src="images/arte1.png" alt="Imagen 1">
+                        </div>
+                    </div>
+
+                    <!-- Card Superior Derecha (solo texto) -->
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <div class="texto-card d-flex align-items-center">
+                            <div>
+                                <p>Música</p>
+                                <p class="p-card-arte">Se realizan actividades relacionadas con el tango y el candombe,
+                                    destinado tanto a los habitantes locales como a los numerosos turistas que visitan
+                                    la zona.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4 arte-contenido">
+                    <!-- Card Inferior Izquierda (solo texto) -->
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <div class="texto-card">
+                            <div>
+                                <p>Pinturas Callejeras</p>
+                                <p class="p-card-arte">Las coloridas y creativas obras de arte que adornan las calles de
+                                    este icónico barrio de Buenos Aires cautivan a locales y turistas por igual. Desde
+                                    murales impresionantes hasta grafitis con un mensaje poderoso, las pinturas
+                                    callejeras de San Telmo son una expresión vibrante de la cultura y la creatividad
+                                    que caracterizan esta zona de la ciudad.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Inferior Derecha (solo imagen) -->
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <div class="contenido-imagen">
+                            <img src="images/arte2.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Carrousel -->
+        <div class="carrousel">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="image-container text-center ">
+                                <img src="images/1c.png" class="d-block w-15" alt="Imagen 1">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                            <div class="image-container text-center ">
+                                <img src="images/2c.png" class="d-block w-15" alt="Imagen 2">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                            <div class="image-container text-center ">
+                                <img src="images/3c.png" class="d-block w-15" alt="Imagen 3">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                            <div class="image-container text-center ">
+                                <img src="images/4c.png" class="d-block w-15" alt="Imagen 4">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="image-container text-center ">
+                                <img src="images/5c.png" class="d-block w-15" alt="Imagen 5">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                            <div class="image-container text-center ">
+                                <img src="images/6c.png" class="d-block w-15" alt="Imagen 6">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                            <div class="image-container text-center ">
+                                <img src="images/7c.png" class="d-block w-15" alt="Imagen 7">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                            <div class="image-container text-center ">
+                                <img src="images/8c.png" class="d-block w-15" alt="Imagen 8">
+                                <div class="texto-carrousel">
+                                    <p class="title">Título 1</p>
+                                    <p class="subtitle">Subtítulo 1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        </div>
+
+        <!--kahoot-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Título del Texto</h2>
+                    <p>
+                        Este es el texto que va en la columna izquierda. Puedes agregar información adicional aquí, como
+                        descripciones, detalles o cualquier contenido relevante que desees mostrar.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/cel.png" class="img-fluid" alt="Descripción de la imagen">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
 
 
     <!-- FOOTER -->
