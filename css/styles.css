@@ -14,9 +14,9 @@ body {
 
 .navbar {
     background-color: #a51916;
-    position: fixed; /* Mantener el navbar fijo en la parte superior */
-    width: 100%; /* Asegura que el navbar ocupe todo el ancho */
-    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    position: fixed;
+    width: 100%; 
+    z-index: 1000; 
 }
 
 .nav-link {
@@ -28,9 +28,9 @@ body {
     margin-left: 100px;
 }
 
-/* Añadir un margen superior a la siguiente sección para evitar superposición */
+
 .div-titulo-unique {
-    margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+    margin-top: 80px; 
 }
 
 .div-titulo-unique {
@@ -46,19 +46,19 @@ body {
 .titulo-unique {
     width: 100%;
     height: auto;
-    object-fit: cover; /* La imagen cubre el contenedor */
-    position: absolute; /* La imagen se coloca detrás del contenido */
+    object-fit: cover; 
+    position: absolute; 
     top: 0;
     left: 0;
-    z-index: -1; /* La imagen queda por detrás de los textos */
+    z-index: -1;
 }
 
 .content-overlay {
-    color: white; /* Color del texto para que contraste con la imagen */
-    z-index: 1; /* Asegura que los párrafos estén sobre la imagen */
-    padding: 20px; /* Espaciado interno para los párrafos */
-    max-width: 1100px; /* Controla el ancho máximo del bloque de texto */
-    margin-top: 300px; /* Ajusta este valor según el diseño que desees */
+    color: white; 
+    z-index: 1; 
+    padding: 20px; 
+    max-width: 1100px; 
+    margin-top: 300px; 
 }
 
 .p-subtitulo {
@@ -68,8 +68,8 @@ body {
 
 @media (max-width: 850px) {
     .content-overlay {
-        font-size: 0.9em; /* Ajusta el tamaño de texto en pantallas pequeñas */
-        padding: 15px; /* Ajusta el padding en pantallas más pequeñas */
+        font-size: 0.9em; 
+        padding: 15px; 
     }
 }
 
@@ -82,13 +82,9 @@ body {
     background-image: url(../images/fondo-circulos.png);
     height: 110vh;
     background-size: cover;
-    /* Asegura que la imagen cubra todo el contenedor */
     background-position: center;
-    /* Centra la imagen en el contenedor */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
     background-color: #ac9664;
-
     position: relative;
     z-index: 1;
 }
@@ -99,117 +95,84 @@ body {
 
 .p-circulos {
     color: white;
-    /* Color del texto */
     font-size: 1rem;
-    /* Tamaño de fuente ajustado */
     width: 800px;
-    /* Ancho específico */
     text-align: center;
-    /* Centra el texto dentro de los párrafos */
     margin: 0;
-    /* Elimina márgenes para una mejor alineación */
     font-weight: bold;
 }
 
-/* Asegúrate de que el contenedor tenga un tamaño adecuado */
+
 .d-flex {
     width: 100%;
-    /* Para que ocupe todo el ancho disponible */
 }
 
-/* Opcional: Agregar algo de espacio entre los párrafos */
 .p-circulos+.p-circulos {
     margin-top: 10px;
-    /* Espacio entre los párrafos */
 }
 
 .titulo-imperdibles {
     font-family: 'Auromiya', sans-serif !important;
-    /* Asegúrate de escribirlo igual */
     color: white;
 }
 
 .row {
     display: flex;
-    /* Usar flexbox para el contenedor de la fila */
     justify-content: center;
-    /* Centra los elementos */
     flex-wrap: wrap;
-    /* Permite que los elementos se muevan a la siguiente fila si no hay espacio */
 }
 
 .circle {
     width: 80%;
-    /* Hacemos que el círculo ocupe todo el ancho disponible */
     aspect-ratio: 1;
-    /* Mantiene la relación de aspecto 1:1 */
     border-radius: 50%;
-    /* Hace que el div sea un círculo */
     overflow: hidden;
-    /* Oculta cualquier parte de la imagen que sobresalga */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    /* Establece el contexto para el posicionamiento absoluto del texto */
     transition: transform 0.5s ease, background-color 0.5s ease;
-    /* Transiciones para rotación y color */
     background-color: transparent;
-    /* Color de fondo inicial */
     margin: 2px;
 }
 
 .circle img {
     height: 100%;
     object-fit: cover;
-    /* Ajusta la imagen para cubrir el círculo sin deformarse */
     transition: opacity 0.5s ease;
-    /* Transición suave para la opacidad */
 }
 
 
 .circle-description {
     display: none;
-    /* Oculta el párrafo por defecto */
     position: absolute;
     width: 55%;
-    /* Aumenta el ancho del texto para que ocupe más espacio horizontalmente */
     left: 50%;
     transform: translateX(-50%) rotateY(180deg);
-    /* Revertir la rotación para mantener la orientación */
     color: white;
-    /* Color del texto */
     text-align: center;
     z-index: 1;
-    /* Asegura que el texto esté por encima de la imagen */
     font-size: 10px;
     margin: 0;
     line-height: 1.4;
-    /* Ajusta la separación entre líneas */
 }
 
 .circle:hover {
     background-color: #b5945a;
-    /* Cambia el color de fondo al pasar el mouse */
     transform: rotateY(180deg);
-    /* Rota el círculo al pasar el mouse */
 }
 
 .circle:hover img {
     opacity: 0;
-    /* Oculta la imagen al pasar el mouse */
 }
 
 .circle:hover .circle-text {
     display: none;
-    /* Oculta el texto principal al pasar el mouse */
 }
 
 .circle:hover .circle-description {
     display: block;
-    /* Muestra el párrafo al pasar el mouse */
     transform: translateX(-50%) rotateY(180deg);
-    /* Mantiene la orientación correcta al mostrar */
 }
 
 
@@ -222,25 +185,18 @@ body {
     padding: 30px 0;
     background-color: #ffffff;
     height: 100vh;
-    /* Hace que el contenedor ocupe toda la altura de la ventana */
     display: flex;
-    /* Activamos Flexbox */
     align-items: center;
-    /* Centra verticalmente el contenido */
     justify-content: center;
-    /* Centra horizontalmente el contenido */
 }
 
-/* Ajustes del contenedor del mapa */
 .map-container {
     width: 100%;
     height: 300px;
-    /* Puedes ajustar la altura según tus necesidades */
     border: 2px solid #ccc;
     border-radius: 10px;
 }
 
-/* Caja de información a la derecha */
 .info-box {
     padding: 20px;
 }
@@ -251,7 +207,6 @@ body {
 
 }
 
-/* Asegura que el mapa y la caja de info tengan buen espaciado en pantallas pequeñas */
 @media (max-width: 768px) {
     .map-container {
         height: 200px;
@@ -265,39 +220,31 @@ body {
 
 
 
-/*historia*/
+/*Historia*/
 .historia-section-unique {
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    /* Color de fondo para la sección */
 }
 
 .historia-image-unique img {
     width: 100%;
     height: 70vh;
-    /* Ajusta según el tamaño que necesites */
     object-fit: cover;
     display: block;
     margin: 0 auto;
 }
 
-
-/* Contenedor para las cards, que controla el margen superior */
 .historia-cards-container-unique {
     position: relative;
     top: -150px;
-    /* Ajusta la superposición de las cards sobre la imagen */
     z-index: 2;
-    /* Hace que las cards estén encima de la imagen */
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente las cards */
     align-items: center;
-    /* Centra verticalmente las cards dentro de su contenedor */
 }
 
-/* Estilos de las cards */
+
 .historia-cards-unique {
     display: flex;
     justify-content: center;
@@ -307,7 +254,6 @@ body {
 
 .card-unique {
     background-color: #b5945a;
-    /* Color de fondo de la card */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
@@ -315,7 +261,6 @@ body {
 
 .historia-titulo {
     font-family: 'Auromiya', sans-serif !important;
-    /* Asegúrate de escribirlo igual */
     color: white;
 }
 
@@ -325,7 +270,6 @@ body {
 }
 
 
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .historia-cards-unique {
         flex-direction: column;
@@ -358,64 +302,64 @@ body {
 /* CARDS */
 .seccion-4card {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center; 
     margin-bottom: 6rem;
 }
 
 .card{
-    perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+    perspective: 1000px;
     border: none!important
 }
 
 .card-inner {
     position: relative;
-    width: 100%; /* Ajusta según sea necesario */
-    height: 100%; /* Ajusta según sea necesario */
-    transition: transform 0.5s; /* Transición suave para el giro */
-    transform-style: preserve-3d; /* Mantiene el efecto 3D */
+    width: 100%; 
+    height: 100%; 
+    transition: transform 0.5s; 
+    transform-style: preserve-3d; 
 }
 
 .img-card-historia {
     display: block;
     width: 100%;
-    transition: opacity 0.6s ease-in-out; /* Transición suave para la opacidad */
-    backface-visibility: hidden; /* Oculta la parte trasera de la imagen */
+    transition: opacity 0.6s ease-in-out; 
+    backface-visibility: hidden;
 }
 
 .card-description-historia {
     position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%) rotateY(180deg); /* Mantiene la orientación correcta */
-    color: white; /* Color del texto */
-    font-size: 11px; /* Tamaño de la fuente */
-    text-align: center; /* Centra el texto dentro del párrafo */
-    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
-    backface-visibility: hidden; /* Oculta la parte trasera del texto */
-    background-color: #ac9664; /* Color de fondo marrón para la parte trasera */
-    width: 100%; /* Asegura que el fondo cubra toda la tarjeta */
-    height: 100%; /* Asegura que el fondo cubra toda la tarjeta */
-    display: flex; /* Usamos flexbox para centrar el texto */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) rotateY(180deg); 
+    color: white; 
+    font-size: 11px; 
+    text-align: center; 
+    z-index: 1;
+    backface-visibility: hidden; 
+    background-color: #ac9664; 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .card:hover .card-inner {
-    transform: rotateY(180deg); /* Rota el contenedor de la tarjeta */
+    transform: rotateY(180deg); 
 }
 
 .card:hover .img-card {
-    opacity: 0; /* Oculta la imagen al hacer hover */
+    opacity: 0; 
 }
 
 .card:hover .card-description {
-    display: block; /* Muestra el texto al pasar el mouse */
+    display: block; 
 }
 
 
 
-/* Sección de texto y foto */
+/* Arquitectura */
 
 .text-image-section {
     background-color: #a51916;
@@ -430,19 +374,12 @@ body {
 
 .arquitectura-titulo {
     font-family: 'Auromiya', sans-serif !important;
-    /* Asegúrate de escribirlo igual */
     color: white;
 }
 
 .p-arquitectura {
     color: white;
 }
-
-
-
-
-
-
 
 
 /*SECCION ARTE*/
@@ -456,33 +393,31 @@ body {
 
 }
 
-/* Estilo general para las tarjetas */
 .card-arte {
     width: 100%;
-    height: 300px; /* Altura fija para todas las tarjetas */
+    height: 300px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.11); /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.11); 
     border-radius: 20px;
     padding: 1rem;
 }
 
-/* Imágenes dentro de las tarjetas */
 .img-card {
     width: 80%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen al contenedor */
+    object-fit: cover; 
     border-radius: 20px;
 }
 
-/* Texto dentro de las tarjetas */
+
 .text-card {
-    color: white; /* Texto blanco */
+    color: white; 
     text-align: center;
 }
 
-/* Estilo de los párrafos dentro de las tarjetas */
+
 .p-card-arte {
     font-size: 12px;
 }
@@ -494,7 +429,7 @@ body {
 
 
 
-/*atracciones*/
+/*Atracciones*/
 .atracciones{
     background-color: #a51916;
     width: 100%;
@@ -505,16 +440,10 @@ body {
     padding-left: 5rem;
 }
 
-
-
-
-
 /* Carrousel */
-
-
 .carousel-item {
-    display: flex; /* Alinea las imágenes en una sola fila */
-    justify-content: center; /* Centra las imágenes dentro del carrusel */
+    display: flex; 
+    justify-content: center; 
 }
 
 .carousel-item img {
@@ -530,10 +459,10 @@ body {
 .image-container-7,
 .image-container-8 {
     display: flex;
-    flex-direction: column; /* Organiza las imágenes y el texto en columnas */
-    align-items: center; /* Centra horizontalmente la imagen y los textos */
-    text-align: center; /* Centra el texto debajo de la imagen */
-    padding: 0 4px; /* Espaciado lateral */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 0 4px; 
 }
 
 .texto-carousel-1,
@@ -564,7 +493,7 @@ body {
 .subtitle-6,
 .subtitle-7,
 .subtitle-8 {
-    margin: 5px 0; /* Añade un margen vertical entre el título y el subtítulo */
+    margin: 5px 0; 
 }
 
 .title-1,
@@ -575,8 +504,8 @@ body {
 .title-6,
 .title-7,
 .title-8 {
-    font-size: 1rem; /* Tamaño de fuente ajustado para el título */
-    font-weight: bold; /* Hace que el título sea negrita */
+    font-size: 1rem; 
+    font-weight: bold; 
 }
 
 .subtitle-1,
@@ -587,11 +516,9 @@ body {
 .subtitle-6,
 .subtitle-7,
 .subtitle-8 {
-    font-size: 0.875rem; /* Tamaño de fuente más pequeño para el subtítulo */
-    color: #666; /* Cambia el color del subtítulo para diferenciarlo del título */
+    font-size: 0.875rem; 
+    color: #666; 
 }
-
-
 
 /*kahoot*/
 .contenedor-kahoot{
@@ -608,16 +535,16 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 30%; /* Ocupa la mitad superior */
-    background-color: #a51916; /* Color rojo */
-    z-index: 1; /* Detrás de la imagen */
+    height: 30%; 
+    background-color: #a51916; 
+    z-index: 1; 
 }
 
 .img-juga {
     width: 450px;
     padding-left: 5rem;
     position: relative;
-    z-index: 2; /* Asegura que la imagen esté delante del pseudo-elemento */
+    z-index: 2; 
 }
 
 
@@ -643,7 +570,7 @@ body {
 }
 .img-kahoot{
     width: 400px;
-    z-index: 2; /* Asegura que la imagen esté delante del pseudo-elemento */
+    z-index: 2; 
 }
 
 .texto-kahoot{
@@ -669,31 +596,21 @@ body {
 /* Estilo del footer */
 .footer {
     background-color: #a51916;
-    ;
-    /* Color de fondo */
     color: white;
-    /* Color del texto */
 }
 
 .footer .left-footer {
     text-align: left;
-    /* Alineación del texto a la izquierda */
 }
 
 .footer .right-footer {
     display: flex;
-    /* Usamos flex para alinear los iconos */
     gap: 15px;
-    /* Espacio entre los iconos */
     font-size: 24px;
-    /* Tamaño de los íconos */
 }
 
 .social-icon:hover {
     color: #fff;
-    /* Mantiene el color blanco al hacer hover */
     transform: scale(1.1);
-    /* Aumentar el tamaño de los iconos al pasar el mouse */
     transition: transform 0.3s;
-    /* Efecto de hover suave */
 }
