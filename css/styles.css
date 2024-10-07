@@ -108,6 +108,7 @@ body {
     /* Centra el texto dentro de los párrafos */
     margin: 0;
     /* Elimina márgenes para una mejor alineación */
+    font-weight: bold;
 }
 
 /* Asegúrate de que el contenedor tenga un tamaño adecuado */
@@ -181,7 +182,7 @@ body {
     text-align: center;
     z-index: 1;
     /* Asegura que el texto esté por encima de la imagen */
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
     line-height: 1.4;
     /* Ajusta la separación entre líneas */
@@ -451,6 +452,7 @@ body {
     z-index: 2;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    padding-bottom: 2rem;
 
 }
 
@@ -496,7 +498,7 @@ body {
 .atracciones{
     background-color: #a51916;
     width: 100%;
-    height: 70vh;
+    height: 85vh;
 }
 .titulo-atracciones{
     width: 800px;
