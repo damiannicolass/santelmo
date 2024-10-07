@@ -31,21 +31,27 @@
                         <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#historia">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#historia">Emblemas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#historia">Arquitectura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Arte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#atracciones">Atracciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#ubicacion">Ubicacion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Imperdibles</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link"
                             href="https://play.kahoot.it/v2/lobby?quizId=97b07076-52d2-4307-b1a0-55b9c852c947"
-                            target="_blank">¡Jugá con nosotras!</a>
+                            target="_blank">Juguemos</a>
                     </li>
                 </ul>
             </div>
@@ -94,7 +100,7 @@
 
 
     <!--HISTORIA-->
-    <section class="historia-section-unique" id="historia">
+    <section class="historia-section-unique container-fluid p-0" id="historia">
         <div class="historia-image-unique">
             <img src="images/HISTORIA.png" alt="Imagen de Historia" class="historia-image-unique-img">
         </div>
@@ -123,40 +129,50 @@
 
 
     <!-- CARDS -->
-    <div class="container d-flex seccion-card">
-        <div class="row col-4">
-            <!-- Primera imagen (4 columnas, 2 filas) -->
-            <div class="container d-flex justify-content-center">
-                <img src="images/3.png" class="rounded-3 img-santo" alt="Santo Imagen">
+    <!-- CARDS -->
+<section class="container seccion-4card">
+    <div class="row g-3">
+        <!-- Primera imagen -->
+        <div class="col-12 col-md-3 d-flex justify-content-center">
+            <div class="card">
+                <div class="card-inner">
+                    <img src="images/1.png" class="img-card-historia" alt="Santo Imagen">
+                    <div class="card-description-historia">Texto para Santo Imagen</div>
+                </div>
             </div>
-
         </div>
-        <div class="row">
-            <!-- Segunda imagen (4 columnas, 1 fila) -->
-            <div class="col-md-4 d-flex justify-content-center">
-                <img src="images/5.png" class="img-doble" alt="Mercado de San Telmo">
-            </div>
 
-            <!-- Tercera imagen (4 columnas, 1 fila) -->
-            <div class="col-md-4 d-flex justify-content-center">
-                <img src="images/6.png" class="img-doble" alt="Escudo San Telmo">
+        <!-- Segunda imagen -->
+        <div class="col-12 col-md-3 d-flex justify-content-center">
+            <div class="card">
+                <div class="card-inner">
+                    <img src="images/2.png" class="img-card-historia" alt="Mercado de San Telmo">
+                    <div class="card-description-historia">Texto para Mercado de San Telmo</div>
+                </div>
             </div>
+        </div>
 
-            <!-- Cuarta imagen (4 columnas, 1 fila) -->
-            <div class="col-md-8 ">
-                <img src="images/4.png" class="img-abajo" alt="Equipo San Telmo">
+        <!-- Tercera imagen -->
+        <div class="col-12 col-md-3 d-flex justify-content-center">
+            <div class="card">
+                <div class="card-inner">
+                    <img src="images/3.png" class="img-card-historia" alt="Escudo San Telmo">
+                    <div class="card-description-historia">Texto para Escudo San Telmo</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuarta imagen -->
+        <div class="col-12 col-md-3 d-flex justify-content-center">
+            <div class="card">
+                <div class="card-inner">
+                    <img src="images/4.png" class="img-card-historia" alt="Equipo San Telmo">
+                    <div class="card-description-historia">Texto para Equipo San Telmo</div>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
+</section>
 
 
 
@@ -245,122 +261,139 @@
     </section>
 
 
+
+
+
+
+
+
+
+
     <!-- ARTE -->
     <div class="arte">
-        <!--CARD-->
         <div class="container">
-            <div class="card-arte">
-                <div class="row arte-contenido">
-                    <!-- Card Superior Izquierda (solo imagen) -->
-                    <div class="col-md-3 d-flex justify-content-center">
-                        <div class="contenido-imagen">
-                            <img src="images/arte1.png" alt="Imagen 1">
+            <div class="row g-4">
+                <!-- Izquierda: 4 tarjetas (2 filas, 2 columnas) -->
+                <div class="col-md-6">
+                    <div class="row g-4">
+                        <!-- Primera fila: 2 tarjetas -->
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card-arte">
+                                <img src="images/arte1.png" alt="Imagen 1" class="img-card">
+                            </div>
                         </div>
-                    </div>
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card-arte text-card">
+                                <div>
+                                    <p class="titulo-card">Música</p>
+                                    <p class="p-card-arte">Se realizan actividades relacionadas con el tango y el
+                                        candombe, destinado tanto a los habitantes locales como a los numerosos turistas
+                                        que visitan la zona.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- Card Superior Derecha (solo texto) -->
-                    <div class="col-md-3 d-flex justify-content-center">
-                        <div class="texto-card d-flex align-items-center">
-                            <div>
-                                <p>Música</p>
-                                <p class="p-card-arte">Se realizan actividades relacionadas con el tango y el candombe,
-                                    destinado tanto a los habitantes locales como a los numerosos turistas que visitan
-                                    la zona.</p>
+                        <!-- Segunda fila: 2 tarjetas -->
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card-arte text-card">
+                                <div>
+                                    <p class="titulo-card">Pinturas Callejeras</p>
+                                    <p class="p-card-arte">Las coloridas y creativas obras de arte que adornan las
+                                        calles de este icónico barrio de Buenos Aires cautivan a locales y turistas por
+                                        igual...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card-arte">
+                                <img src="images/arte2.png" alt="Imagen 2" class="img-card">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row mt-4 arte-contenido">
-                    <!-- Card Inferior Izquierda (solo texto) -->
-                    <div class="col-md-3 d-flex justify-content-center">
-                        <div class="texto-card">
-                            <div>
-                                <p>Pinturas Callejeras</p>
-                                <p class="p-card-arte">Las coloridas y creativas obras de arte que adornan las calles de
-                                    este icónico barrio de Buenos Aires cautivan a locales y turistas por igual. Desde
-                                    murales impresionantes hasta grafitis con un mensaje poderoso, las pinturas
-                                    callejeras de San Telmo son una expresión vibrante de la cultura y la creatividad
-                                    que caracterizan esta zona de la ciudad.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card Inferior Derecha (solo imagen) -->
-                    <div class="col-md-3 d-flex justify-content-center">
-                        <div class="contenido-imagen">
-                            <img src="images/arte2.png" alt="Imagen 2">
-                        </div>
+                <!-- Derecha: Imagen grande -->
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="images/TANGO.png" alt="Imagen grande" class="img-card">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
+
+
+    <!--Atracciones-->
+    <section class="container-fluid p-0 m-0 atracciones">
+        <div>
+            <img src="images/ATRACC.png" alt="titulo" class="titulo-atracciones">
+        </div>
         <!-- Carrousel -->
-        <div class="carrousel">
+        <div class="carousel-container pt-5">
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-flex justify-content-center">
-                            <div class="image-container text-center ">
+                            <div class="image-container-1 text-center">
                                 <img src="images/1c.png" class="d-block w-15" alt="Imagen 1">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-1">
+                                    <p class="title-1">Título 1</p>
+                                    <p class="subtitle-1">Subtítulo 1</p>
                                 </div>
                             </div>
-                            <div class="image-container text-center ">
+                            <div class="image-container-2 text-center">
                                 <img src="images/2c.png" class="d-block w-15" alt="Imagen 2">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-2">
+                                    <p class="title-2">Título 2</p>
+                                    <p class="subtitle-2">Subtítulo 2</p>
                                 </div>
                             </div>
-                            <div class="image-container text-center ">
+                            <div class="image-container-3 text-center">
                                 <img src="images/3c.png" class="d-block w-15" alt="Imagen 3">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-3">
+                                    <p class="title-3">Título 3</p>
+                                    <p class="subtitle-3">Subtítulo 3</p>
                                 </div>
                             </div>
-                            <div class="image-container text-center ">
+                            <div class="image-container-4 text-center">
                                 <img src="images/4c.png" class="d-block w-15" alt="Imagen 4">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-4">
+                                    <p class="title-4">Título 4</p>
+                                    <p class="subtitle-4">Subtítulo 4</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-center">
-                            <div class="image-container text-center ">
+                            <div class="image-container-5 text-center">
                                 <img src="images/5c.png" class="d-block w-15" alt="Imagen 5">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-5">
+                                    <p class="title-5">Título 5</p>
+                                    <p class="subtitle-5">Subtítulo 5</p>
                                 </div>
                             </div>
-                            <div class="image-container text-center ">
+                            <div class="image-container-6 text-center">
                                 <img src="images/6c.png" class="d-block w-15" alt="Imagen 6">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-6">
+                                    <p class="title-6">Título 6</p>
+                                    <p class="subtitle-6">Subtítulo 6</p>
                                 </div>
                             </div>
-                            <div class="image-container text-center ">
+                            <div class="image-container-7 text-center">
                                 <img src="images/7c.png" class="d-block w-15" alt="Imagen 7">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-7">
+                                    <p class="title-7">Título 7</p>
+                                    <p class="subtitle-7">Subtítulo 7</p>
                                 </div>
                             </div>
-                            <div class="image-container text-center ">
+                            <div class="image-container-8 text-center">
                                 <img src="images/8c.png" class="d-block w-15" alt="Imagen 8">
-                                <div class="texto-carrousel">
-                                    <p class="title">Título 1</p>
-                                    <p class="subtitle">Subtítulo 1</p>
+                                <div class="texto-carousel-8">
+                                    <p class="title-8">Título 8</p>
+                                    <p class="subtitle-8">Subtítulo 8</p>
                                 </div>
                             </div>
                         </div>
@@ -376,28 +409,28 @@
                 </a>
             </div>
         </div>
+    </section>
 
-        <!--kahoot-->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Título del Texto</h2>
-                    <p>
-                        Este es el texto que va en la columna izquierda. Puedes agregar información adicional aquí, como
-                        descripciones, detalles o cualquier contenido relevante que desees mostrar.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/cel.png" class="img-fluid" alt="Descripción de la imagen">
-                </div>
+
+    <!--kahoot-->
+    <section class="container-fluid m-0 p-0 contenedor-kahoot">
+        <div class="d-flex align-items-center justify-content-center fondo-img-juga">
+            <div class="col-6 col-info-kahoot pb-5">
+                <img src="images/JUGA1.png" alt="" class="img-juga">
+                <h2 class="texto-kahoot pt-5">¿QUE TANTO SABES DE SAN TELMO?</h2>
+                <p class="texto-kahoot texto-p-kahoot pt-4">Apreta el boton o ingresa en kahoot.it e introduci el PIN
+                    que aparece en la pantalla
+                </p>
+                <a href="https://kahoot.it/?pin=68296&refer_method=link" target="_blank">
+                    <button class="button-jugar">A jugar</button>
+                </a>
+
+            </div>
+            <div class="col-6 col-img-kahoot">
+                <img src="images/cel1.png" alt="" class="img-kahoot">
             </div>
         </div>
-
-
-
-
-
-    </div>
+    </section>
 
 
 

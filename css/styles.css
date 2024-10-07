@@ -6,22 +6,21 @@
     font-style: normal;
 }
 
-
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-
 .navbar {
     background-color: #a51916;
-    ;
+    position: fixed; /* Mantener el navbar fijo en la parte superior */
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
 }
 
-
 .nav-link {
-    color: white !important
+    color: white !important;
 }
 
 .logo {
@@ -29,51 +28,37 @@ body {
     margin-left: 100px;
 }
 
+/* Añadir un margen superior a la siguiente sección para evitar superposición */
+.div-titulo-unique {
+    margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+}
 
-
-
-
-
-
-
-/*TITULO*/
 .div-titulo-unique {
     position: relative;
-    /* Necesario para que los párrafos se posicionen sobre la imagen */
     width: 100%;
     height: 100vh;
-    /* Hace que el contenedor ocupe toda la altura de la ventana */
     overflow: hidden;
     display: flex;
     align-items: center;
-    /* Centra verticalmente el contenido dentro del contenedor */
     justify-content: center;
-    /* Centra horizontalmente el contenido */
 }
 
 .titulo-unique {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* La imagen cubre el contenedor */
-    position: absolute;
-    /* La imagen se coloca detrás del contenido */
+    height: auto;
+    object-fit: cover; /* La imagen cubre el contenedor */
+    position: absolute; /* La imagen se coloca detrás del contenido */
     top: 0;
     left: 0;
-    z-index: -1;
-    /* La imagen queda por detrás de los textos */
+    z-index: -1; /* La imagen queda por detrás de los textos */
 }
 
 .content-overlay {
-    color: white;
-    /* Color del texto para que contraste con la imagen */
-    z-index: 1;
-    /* Asegura que los párrafos estén sobre la imagen */
-    padding: 20px;
-    /* Espaciado interno para los párrafos */
-    max-width: 1100px;
-    /* Controla el ancho máximo del bloque de texto */
-    margin-top: 300px;
+    color: white; /* Color del texto para que contraste con la imagen */
+    z-index: 1; /* Asegura que los párrafos estén sobre la imagen */
+    padding: 20px; /* Espaciado interno para los párrafos */
+    max-width: 1100px; /* Controla el ancho máximo del bloque de texto */
+    margin-top: 300px; /* Ajusta este valor según el diseño que desees */
 }
 
 .p-subtitulo {
@@ -83,15 +68,10 @@ body {
 
 @media (max-width: 850px) {
     .content-overlay {
-        font-size: 0.9em;
-        /* Ajusta el tamaño de texto en pantallas pequeñas */
-        padding: 15px;
-        /* Ajusta el padding en pantallas más pequeñas */
+        font-size: 0.9em; /* Ajusta el tamaño de texto en pantallas pequeñas */
+        padding: 15px; /* Ajusta el padding en pantallas más pequeñas */
     }
 }
-
-
-
 
 
 
@@ -368,56 +348,70 @@ body {
 
 
 
+
+
+
+
+
+
 /* CARDS */
-.seccion-card {
-    padding-top: 3rem;
-    /* Espaciado superior */
-    padding-bottom: 3rem;
-    /* Espaciado inferior */
-}
-
-/* Imagen del Santo */
-.img-santo {
-    height: 600px;
-    /* Altura fija para la imagen del santo */
-    object-fit: cover;
-    /* Mantiene la relación de aspecto */
-}
-
-/* Imágenes de la segunda fila (Mercado de San Telmo y Escudo San Telmo) */
-.img-doble {
-    width: 100%;
-    /* Asegura que ambas imágenes ocupen el ancho completo de su columna */
+.seccion-4card {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: stretch;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-bottom: 6rem;
 }
 
-/* Imagen de la cuarta fila (Equipo San Telmo) */
-.img-abajo {
+.card{
+    perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+    border: none!important
+}
+
+.card-inner {
+    position: relative;
+    width: 100%; /* Ajusta según sea necesario */
+    height: 100%; /* Ajusta según sea necesario */
+    transition: transform 0.5s; /* Transición suave para el giro */
+    transform-style: preserve-3d; /* Mantiene el efecto 3D */
+}
+
+.img-card-historia {
+    display: block;
     width: 100%;
-    /* Asegura que ocupe el ancho completo de su columna */
-    height: auto;
-    /* Mantiene la relación de aspecto */
-    border-radius: 0.5rem;
-    /* Bordes redondeados */
+    transition: opacity 0.6s ease-in-out; /* Transición suave para la opacidad */
+    backface-visibility: hidden; /* Oculta la parte trasera de la imagen */
 }
 
-/* Espaciado entre las imágenes */
-.row>div {
-    padding: 0.5rem;
-    /* Espaciado entre imágenes */
+.card-description-historia {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%) rotateY(180deg); /* Mantiene la orientación correcta */
+    color: white; /* Color del texto */
+    font-size: 11px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto dentro del párrafo */
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    backface-visibility: hidden; /* Oculta la parte trasera del texto */
+    background-color: #ac9664; /* Color de fondo marrón para la parte trasera */
+    width: 100%; /* Asegura que el fondo cubra toda la tarjeta */
+    height: 100%; /* Asegura que el fondo cubra toda la tarjeta */
+    display: flex; /* Usamos flexbox para centrar el texto */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
-/* Alineación y flexbox para la cuarta imagen */
-.col-md-8 {
-    display: flex;
-    justify-content: center;
-    /* Centra la cuarta imagen horizontalmente */
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Rota el contenedor de la tarjeta */
 }
+
+.card:hover .img-card {
+    opacity: 0; /* Oculta la imagen al hacer hover */
+}
+
+.card:hover .card-description {
+    display: block; /* Muestra el texto al pasar el mouse */
+}
+
 
 
 /* Sección de texto y foto */
@@ -445,112 +439,227 @@ body {
 
 
 
+
+
+
+
+
 /*SECCION ARTE*/
 .arte {
-    background-image: url(../images/CECI.png);
-    height: 290vh;
-    background-size: contain;
-    /* Ajusta la imagen para que se contenga dentro del área */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
+    background-color: #b5945a;
     position: relative;
-    top: -125px;
     z-index: 2;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
 }
 
+/* Estilo general para las tarjetas */
 .card-arte {
-    padding-top: 7rem;
-}
-
-.arte-contenido {
+    width: 100%;
+    height: 300px; /* Altura fija para todas las tarjetas */
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    /* Asegura que todos los elementos hijos tengan la misma altura */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.11); /* Fondo semi-transparente */
+    border-radius: 20px;
+    padding: 1rem;
 }
 
-.contenido-imagen img {
-    width: 100%;
-    /* Asegura que la imagen ocupe todo el ancho del contenedor */
+/* Imágenes dentro de las tarjetas */
+.img-card {
+    width: 80%;
     height: 100%;
-    /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen al contenedor */
     border-radius: 20px;
-    /* Opcional: añade bordes redondeados a las imágenes */
 }
 
-.texto-card {
-    background-color: rgba(255, 255, 255, 0.11);
-    padding: 2rem;
-    border-radius: 20px;
-    width: 100%;
+/* Texto dentro de las tarjetas */
+.text-card {
+    color: white; /* Texto blanco */
+    text-align: center;
 }
 
+/* Estilo de los párrafos dentro de las tarjetas */
 .p-card-arte {
-    font-size: 10px;
+    font-size: 12px;
 }
+
+.titulo-card {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+/*atracciones*/
+.atracciones{
+    background-color: #a51916;
+    width: 100%;
+    height: 70vh;
+}
+.titulo-atracciones{
+    width: 800px;
+    padding-left: 5rem;
+}
+
+
 
 
 
 /* Carrousel */
-.carrousel {
-    padding-top: 25rem;
-    /* Espacio superior */
-}
+
 
 .carousel-item {
-    display: flex;
-    /* Alinea las imágenes en una sola fila */
-    justify-content: center;
-    /* Centra las imágenes dentro del carrusel */
+    display: flex; /* Alinea las imágenes en una sola fila */
+    justify-content: center; /* Centra las imágenes dentro del carrusel */
 }
 
 .carousel-item img {
     width: 250px;
 }
 
-.image-container {
+.image-container-1,
+.image-container-2,
+.image-container-3,
+.image-container-4,
+.image-container-5,
+.image-container-6,
+.image-container-7,
+.image-container-8 {
     display: flex;
-    flex-direction: column;
-    /* Organiza las imágenes y el texto en columnas */
-    align-items: center;
-    /* Centra horizontalmente la imagen y los textos */
-    text-align: center;
-    /* Centra el texto debajo de la imagen */
-    padding: 0 4px 0 4px;
+    flex-direction: column; /* Organiza las imágenes y el texto en columnas */
+    align-items: center; /* Centra horizontalmente la imagen y los textos */
+    text-align: center; /* Centra el texto debajo de la imagen */
+    padding: 0 4px; /* Espaciado lateral */
 }
 
-.texto-carrousel{
+.texto-carousel-1,
+.texto-carousel-2,
+.texto-carousel-3,
+.texto-carousel-4,
+.texto-carousel-5,
+.texto-carousel-6,
+.texto-carousel-7,
+.texto-carousel-8 {
     background-color: white;
     width: 100%;
 }
-.title,
-.subtitle {
-    margin: 5px 0;
-    /* Añade un margen vertical entre el título y el subtítulo */
+
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5,
+.title-6,
+.title-7,
+.title-8,
+.subtitle-1,
+.subtitle-2,
+.subtitle-3,
+.subtitle-4,
+.subtitle-5,
+.subtitle-6,
+.subtitle-7,
+.subtitle-8 {
+    margin: 5px 0; /* Añade un margen vertical entre el título y el subtítulo */
 }
 
-.title {
-    font-size: 1rem;
-    /* Tamaño de fuente ajustado para el título */
-    font-weight: bold;
-    /* Hace que el título sea negrita */
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5,
+.title-6,
+.title-7,
+.title-8 {
+    font-size: 1rem; /* Tamaño de fuente ajustado para el título */
+    font-weight: bold; /* Hace que el título sea negrita */
 }
 
-.subtitle {
-    font-size: 0.875rem;
-    /* Tamaño de fuente más pequeño para el subtítulo */
-    color: #666;
-    /* Cambia el color del subtítulo para diferenciarlo del título */
+.subtitle-1,
+.subtitle-2,
+.subtitle-3,
+.subtitle-4,
+.subtitle-5,
+.subtitle-6,
+.subtitle-7,
+.subtitle-8 {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño para el subtítulo */
+    color: #666; /* Cambia el color del subtítulo para diferenciarlo del título */
 }
 
 
 
+/*kahoot*/
+.contenedor-kahoot{
+    width: 100%;
+}
+.fondo-img-juga {
+    position: relative;
+
+}
+
+.fondo-img-juga::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Ocupa la mitad superior */
+    background-color: #a51916; /* Color rojo */
+    z-index: 1; /* Detrás de la imagen */
+}
+
+.img-juga {
+    width: 450px;
+    padding-left: 5rem;
+    position: relative;
+    z-index: 2; /* Asegura que la imagen esté delante del pseudo-elemento */
+}
 
 
 
+.col-info-kahoot{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    padding: 3rem;
+}
 
+.col-img-kahoot{
+    
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+	align-content: stretch;
+}
+.img-kahoot{
+    width: 400px;
+    z-index: 2; /* Asegura que la imagen esté delante del pseudo-elemento */
+}
+
+.texto-kahoot{
+    color: #51197e;
+}
+.texto-p-kahoot{
+    font-size: 22px;
+    width: 290px;
+    text-align: center;
+}
+
+.button-jugar{
+    background-color: #b5945a;
+    padding: 5px 25px 5px 25px;
+    color: white;
+    border-radius: 10px;
+    border: white;
+}
 
 
 
