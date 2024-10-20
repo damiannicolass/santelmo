@@ -28,7 +28,6 @@ body {
     margin-left: 100px;
 }
 
-
 .div-titulo-unique {
     margin-top: 80px; 
 }
@@ -73,10 +72,6 @@ body {
     }
 }
 
-
-
-
-
 /*Circulos */
 .circle-section {
     background-image: url(../images/fondo-circulos.png);
@@ -101,7 +96,6 @@ body {
     margin: 0;
     font-weight: bold;
 }
-
 
 .d-flex {
     width: 100%;
@@ -176,9 +170,6 @@ body {
 }
 
 
-
-
-
 /* Estilo para la sección del mapa */
 
 .map-section {
@@ -213,11 +204,6 @@ body {
         /* Reduce la altura en pantallas más pequeñas */
     }
 }
-
-
-
-
-
 
 
 /*Historia*/
@@ -292,13 +278,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 /* CARDS */
 .seccion-4card {
     display: flex;
@@ -359,9 +338,7 @@ body {
 }
 
 
-
 /* Arquitectura */
-
 .text-image-section {
     background-color: #a51916;
     height: 80vh;
@@ -381,7 +358,6 @@ body {
 .p-arquitectura {
     color: white;
 }
-
 
 /*SECCION ARTE*/
 .arte {
@@ -436,8 +412,6 @@ body {
         height: auto; /* Ajusta la altura de las tarjetas en pantallas pequeñas */
     }
 }
-
-
 
 
 /*Atracciones*/
@@ -563,8 +537,6 @@ body {
     z-index: 2; 
 }
 
-
-
 .col-info-kahoot{
     display: flex;
     flex-direction: column;
@@ -603,9 +575,6 @@ body {
     border-radius: 10px;
     border: white;
 }
-
-
-
 
 /* Estilo del footer */
 .footer {
