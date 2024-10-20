@@ -123,7 +123,7 @@ body {
 }
 
 .circle {
-    width: 80%;
+    width: 100%;
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
@@ -152,7 +152,7 @@ body {
     color: white;
     text-align: center;
     z-index: 1;
-    font-size: 10px;
+    font-size: 14px;
     margin: 0;
     line-height: 1.4;
 }
@@ -305,6 +305,7 @@ body {
     justify-content: center; 
     align-items: center; 
     margin-bottom: 6rem;
+    height: 70vh;
 }
 
 .card{
@@ -333,7 +334,7 @@ body {
     left: 50%; 
     transform: translate(-50%, -50%) rotateY(180deg); 
     color: white; 
-    font-size: 11px; 
+    font-size: 14px; 
     text-align: center; 
     z-index: 1;
     backface-visibility: hidden; 
@@ -390,33 +391,31 @@ body {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     padding-bottom: 2rem;
-
+    height: 80vh; /* 80% de la altura de la pantalla */
 }
 
 .card-arte {
     width: 100%;
-    height: 300px; 
+    height: 100%; /* Para que las tarjetas también se ajusten */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.11); 
+    background-color: rgba(255, 255, 255, 0.11);
     border-radius: 20px;
     padding: 1rem;
 }
 
 .img-card {
-    width: 80%;
+    width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: contain;
     border-radius: 20px;
 }
 
-
 .text-card {
-    color: white; 
+    color: white;
     text-align: center;
 }
-
 
 .p-card-arte {
     font-size: 12px;
@@ -427,6 +426,18 @@ body {
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .arte {
+        height: auto; /* Se ajusta la altura en pantallas pequeñas */
+        padding-top: 2rem;
+    }
+
+    .card-arte {
+        height: auto; /* Ajusta la altura de las tarjetas en pantallas pequeñas */
+    }
+}
+
+
 
 
 /*Atracciones*/
@@ -434,16 +445,19 @@ body {
     background-color: #a51916;
     width: 100%;
     height: 85vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .titulo-atracciones{
     width: 800px;
-    padding-left: 5rem;
 }
 
 /* Carrousel */
 .carousel-item {
     display: flex; 
-    justify-content: center; 
+    justify-content: center;
 }
 
 .carousel-item img {
@@ -462,7 +476,7 @@ body {
     flex-direction: column; 
     align-items: center; 
     text-align: center; 
-    padding: 0 4px; 
+    padding: 0 8px 0 8px;
 }
 
 .texto-carousel-1,
@@ -474,7 +488,9 @@ body {
 .texto-carousel-7,
 .texto-carousel-8 {
     background-color: white;
-    width: 100%;
+    width: 250px;
+    height: 150px;
+    padding: 5px;
 }
 
 .title-1,
@@ -493,7 +509,7 @@ body {
 .subtitle-6,
 .subtitle-7,
 .subtitle-8 {
-    margin: 5px 0; 
+    margin: 10px 0; 
 }
 
 .title-1,
@@ -504,7 +520,7 @@ body {
 .title-6,
 .title-7,
 .title-8 {
-    font-size: 1rem; 
+    font-size: 15px; 
     font-weight: bold; 
 }
 
@@ -517,7 +533,7 @@ body {
 .subtitle-7,
 .subtitle-8 {
     font-size: 0.875rem; 
-    color: #666; 
+    color: #474747; 
 }
 
 /*kahoot*/
@@ -552,7 +568,7 @@ body {
 .col-info-kahoot{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: stretch;
@@ -564,9 +580,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: flex-end;
-	align-content: stretch;
+    justify-content: start;
 }
 .img-kahoot{
     width: 400px;
